@@ -49,14 +49,13 @@ def display_sports_menu():
 
 def main():
     students = []
+    valid_courses = ('History', 'Math', 'English', 'Spanish', 'Programming', 'Psychology')
     next_student_id = 1
 
     while True:
         display_menu()
         command = val.get_range('Please enter a command number', 0, 6)
         print()
-
-
         if command == 1:
             sm.get_list(students)
         elif command == 2:
@@ -71,7 +70,7 @@ def main():
             if command == 1:
                 cm.list(students)
             elif command == 2:
-                cm.add(students)
+                cm.add(students, valid_courses)
             elif command == 3:
                 cm.delete(students)
             elif command == 0:
