@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
 """
-# Programmer: Rushandy Andrea
-# Date: October 31, 2021
-# Description: For this assignment, I have to create a program that will store student's ID's
-, plus first and last name in a tow-dimensional list.
+# Programmer: Rushandy Andrea, Kasey Drevecky
+# Date: November 7th, 2021
+# Description: For this assignment, we had to work as a team to make a Students course and sports
+program that stores list etc.
 """
 
 # Authorship
-__author__ = 'Rushandy Andrea'
+__author__ = 'Rushandy Andrea, Kasey Drevecky'
 __version__ = '1.0'
-__date__ = 'Oct 31, 2021'
+__date__ = 'November 7th, 2021'
 __status__ = 'Development'
 
 import student_maintenance as sm
