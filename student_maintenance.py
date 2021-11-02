@@ -51,8 +51,10 @@ def add_student(students, next_student_id):
 
     student_first_name = val.get_string('First name of student: ').title()
     student_last_name = val.get_string('Last name of student: ').title()
+    course_list = []
+    sports_list = []
 
-    students.append([next_student_id, student_first_name, student_last_name])
+    students.append([next_student_id, student_first_name, student_last_name, course_list, sports_list])
 
     print(f'Student ID number {next_student_id} {student_first_name} {student_last_name} was added.')
 

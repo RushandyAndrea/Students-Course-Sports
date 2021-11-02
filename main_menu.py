@@ -15,6 +15,8 @@ __status__ = 'Development'
 
 import student_maintenance as sm
 import data_validation as val
+import course_maintenance as cm
+import sports_maintenance as spm
 
 
 def display_menu():
@@ -23,8 +25,26 @@ def display_menu():
     print('2 - Add a student')
     print('3 - Update a student')
     print('4 - Delete a student')
+    print('5 - Update Course List')
+    print('6 - Update Sports List')
     print('0 - Exit program')
     print()
+
+
+def display_course_menu():
+    print('COMMAND MENU')
+    print('1 - List Courses')
+    print('2 - Add Course')
+    print('3 - Delete Course')
+    print('0 - Back')
+
+
+def display_sports_menu():
+    print('COMMAND MENU')
+    print('1 - List Sports')
+    print('2 - Add Sport')
+    print('3 - Delete Sports')
+    print('0 - Back')
 
 
 def main():
@@ -33,8 +53,9 @@ def main():
 
     while True:
         display_menu()
-        command = val.get_range('Please enter a command number', 0, 4)
+        command = val.get_range('Please enter a command number', 0, 6)
         print()
+
 
         if command == 1:
             sm.get_list(students)
@@ -44,6 +65,28 @@ def main():
             sm.update_student(students)
         elif command == 4:
             sm.delete(students)
+        elif command == 5:
+            display_course_menu()
+            command = val.get_range('Please enter a command number', 0, 3)
+            if command == 1:
+                cm.list(students)
+            elif command == 2:
+                cm.add(students)
+            elif command == 3:
+                cm.delete(students)
+            elif command == 0:
+                break
+        elif command == 6:
+            display_sports_menu()
+            command = val.get_range('Please enter a command number', 0, 3)
+            if command == 1:
+                spm.list(students)
+            elif command == 2:
+                spm.add(students)
+            elif command == 3:
+                spm.delete(students)
+            elif command == 0:
+                break
         elif command == 0:
             break
         else:
