@@ -70,7 +70,7 @@ def main():
             if command == 1:
                 cm.list(students)
             elif command == 2:
-                cm.add(students, valid_courses)
+                cm.add_course(students, valid_courses)
             elif command == 3:
                 cm.delete(students)
             elif command == 0:
