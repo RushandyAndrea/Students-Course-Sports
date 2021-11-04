@@ -12,7 +12,7 @@ __version__ = '1.0'
 __date__ = 'Oct 31, 2021'
 __status__ = 'Development'
 
-import validation as val
+import data_validation as val
 
 
 def get_list(students):
