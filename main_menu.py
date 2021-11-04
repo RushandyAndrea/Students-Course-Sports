@@ -72,7 +72,7 @@ def main():
             elif command == 2:
                 cm.add_course(students, valid_courses)
             elif command == 3:
-                cm.delete(students)
+                cm.delete_course(students)
             elif command == 0:
                 break
         elif command == 6:
