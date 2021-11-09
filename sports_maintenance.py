@@ -78,10 +78,10 @@ def add_student_sport(students, valid_sport):
             if command == 0:
                 break
             if valid_sport[command - 1] in student[3]:
-                print(f'{student[1]} is already enrolled in {valid_sport[command - 1]}')
+                print(f'{student[1]} is already in {valid_sport[command - 1]}')
             else:
                 student[3].append(valid_sport[command - 1])
-                print(f'{student[1]} has been enrolled in {valid_sport[command - 1]}')
+                print(f'{student[1]} has been added to {valid_sport[command - 1]}')
 
 
 def delete_student_sport(students):

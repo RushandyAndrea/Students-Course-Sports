@@ -18,6 +18,18 @@ import student_maintenance as sm
 
 
 def add_course(students, valid_courses):
+    """
+      Prompt the user to enter a student id, and if not valid return
+      Display a list of the courses a student is currently enrolled
+      Display a list of valid courses
+      Prompt the user to enter a valid course id or 0 to return to the course maintenance menu
+      If the student is already in the course, then display error message
+      otherwise add the course to the student's course list
+      When done, display an update list of all the courses the student is enrolled in
+      :param students: multi-dimensional list of student data [[id, first_name, last_name, [courses], [sports]]]
+      :param valid_courses: tuple of all valid courses to select from
+      :return: no value
+      """
     print('Add Courses')
     print('=' * 50)
     student_id = val.get_poss_num('Please enter the Student ID you would like to add courses to', 'int')
@@ -46,6 +58,17 @@ def add_course(students, valid_courses):
 
 
 def delete_course(students):
+    """
+      Prompt the user to enter a student id, and if not valid return
+      Prompt the user to enter a student id, and if not valid return
+      Display a list of valid courses
+      Prompt the user to enter a valid course id or 0 to return to the course maintenance menu
+      If the student is not the select course, then display error message
+      otherwise remove the course to the student's course list
+      When done, display an update list of all the courses the student is enrolled in
+      :param students: multi-dimensional list of student data [[id, first_name, last_name, [courses], [sports]]]
+      :return: no value
+      """
     print('Delete Courses')
     print('=' * 50)
     student_id = val.get_poss_num('Please enter the Student ID you would like to add courses to', 'int')
@@ -68,4 +91,3 @@ def delete_course(students):
                 break
             else:
                 print(f'{student[1]} has been removed from {student[3].pop(command - 1)}')
-
