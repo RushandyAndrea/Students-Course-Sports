@@ -20,6 +20,10 @@ import sports_maintenance as spm
 
 
 def display_menu():
+    """
+    Display command menu only.
+    :return: none
+    """
     print('COMMAND MENU')
     print('1 - List all students')
     print('2 - Add a student')
@@ -32,6 +36,10 @@ def display_menu():
 
 
 def display_course_menu():
+    """
+    Display command menu only.
+    :return: none
+    """
     print('COMMAND MENU')
     print('1 - List Courses')
     print('2 - Add Course')
@@ -40,6 +48,10 @@ def display_course_menu():
 
 
 def display_sports_menu():
+    """
+    Display command menu only.
+    :return: none
+    """
     print('COMMAND MENU')
     print('1 - List Sports')
     print('2 - Add Sport')
@@ -47,7 +59,12 @@ def display_sports_menu():
     print('0 - Back')
 
 
-def main():
+def main(valid_sport=None):
+    """
+
+    :param valid_sport:
+    :return:
+    """
     students = []
     valid_courses = ('History', 'Math', 'English', 'Spanish', 'Programming', 'Psychology')
     next_student_id = 1
@@ -79,11 +96,11 @@ def main():
             display_sports_menu()
             command = val.get_range('Please enter a command number', 0, 3)
             if command == 1:
-                spm.list(students)
+                spm.list_student_sport(students)
             elif command == 2:
-                spm.add(students)
+                spm.add_student_sport(students, valid_sport)
             elif command == 3:
-                spm.delete(students)
+                spm.delete_student_sport(students)
             elif command == 0:
                 break
         elif command == 0:

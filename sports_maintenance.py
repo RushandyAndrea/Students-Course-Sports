@@ -17,6 +17,31 @@ import data_validation as val
 import student_maintenance as sm
 
 
+def list_student_sport(students):
+    """
+    Display the all student information stored in a 2nd list, it will notify the user if there is no
+    data found.
+    :param students: student data (id, first_name, last_name)
+    :return: no value
+    """
+    if len(students) == 0:
+        print("There are no student in the database system.\n")
+        return
+
+    print(f"{'ID':4s} {'First Name':20s} {'Last Name':20s}")
+    print('-' * 4, '-' * 20, '-' * 20)
+
+    for student in students:
+        student_id, first_name, last_name, courses, sports = student
+        print(f'{student_id:<4d} {first_name:20s} {last_name:20s}', end='')
+
+        for sport in sports:
+            print(f'{sport}', end=', ')
+        print()
+
+    return
+
+
 def add_student_sport(students, valid_sport):
     """
     Prompt the user to enter a student id, and if not valid return
