@@ -70,7 +70,7 @@ def main():
             display_course_menu()
             command = val.get_range('Please enter a command number', 0, 3)
             if command == 1:
-                cm.list(students)
+                cm.list_student_course(students)
             elif command == 2:
                 cm.add_course(students, valid_courses)
             elif command == 3:
