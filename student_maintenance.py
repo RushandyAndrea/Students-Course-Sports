@@ -32,7 +32,7 @@ def get_list(students):
     for student in students:
         student_id, first_name, last_name, courses, sports = student
         print(f'{student_id:<4d} {first_name:20s} {last_name:20s}', end='')
-    print()
+        print()
 
 
 def list_student_courses(student):
@@ -131,15 +131,15 @@ def update_student(students):
     student_id = val.get_poss_num('Please enter the Student ID you would like to be updated: ')
 
     if student_id == -1:
-        print(f'Student ID number{student_id} not found.')
+        print(f'Student ID number {student_id} not found.')
         return
 
-    student = students[student_id]
+    student = students[student_id - 1]
 
-    confirm = val.get_yes_no(f'Please confirm that you want to update Student ID number'
+    confirm = val.get_yes_no(f'Please confirm that you want to update Student ID number '
                              f'{student_id} {student[1]} {student[2]}')
 
-    if confirm in ['y', 'yes']:
+    if confirm:
         updated_first_name = input(f'Please enter the students First Name or press ENTER to keep '
                                    f'{student[1]}: ')
         updated_last_name = input(f'Please enter the students Last Name or press ENTER to keep'
