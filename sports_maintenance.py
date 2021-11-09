@@ -28,8 +28,8 @@ def list_student_sport(students):
         print("There are no student in the database system.\n")
         return
 
-    print(f"{'ID':4s} {'First Name':20s} {'Last Name':20s}")
-    print('-' * 4, '-' * 20, '-' * 20)
+    print(f"{'ID':4s} {'First Name':20s} {'Last Name':20s} {'Sports':50s}")
+    print('-' * 4, '-' * 20, '-' * 20, '-' * 50)
 
     for student in students:
         student_id, first_name, last_name, courses, sports = student
@@ -80,7 +80,7 @@ def add_student_sport(students, valid_sport):
             if valid_sport[command - 1] in student[3]:
                 print(f'{student[1]} is already in {valid_sport[command - 1]}')
             else:
-                student[3].append(valid_sport[command - 1])
+                student[4].append(valid_sport[command - 1])
                 print(f'{student[1]} has been added to {valid_sport[command - 1]}')
 
 
@@ -111,7 +111,7 @@ def delete_student_sport(students):
         print('=' * 50)
         while True:
             i = 0
-            for x in student[3]:
+            for x in student[4]:
                 i += 1
                 print(f'{i} = {x}')
             print('0 = Exit')
@@ -119,4 +119,4 @@ def delete_student_sport(students):
             if command == 0:
                 break
             else:
-                print(f'{student[1]} has been removed from {student[3].pop(command - 1)}')
+                print(f'{student[1]} has been removed from {student[4].pop(command - 1)}')
