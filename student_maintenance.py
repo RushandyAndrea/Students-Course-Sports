@@ -32,7 +32,7 @@ def get_list(students):
     for student in students:
         student_id, first_name, last_name, courses, sports = student
         print(f'{student_id:<4d} {first_name:20s} {last_name:20s}', end='')
-    print()
+        print()
 
 
 def list_student_courses(student):

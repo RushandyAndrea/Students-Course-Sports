@@ -25,15 +25,15 @@ def display_menu():
     print('2 - Add a student')
     print('3 - Update a student')
     print('4 - Delete a student')
-    print('5 - Update Course List')
-    print('6 - Update Sports List')
+    print('5 - Update Student Course List')
+    print('6 - Update Student Sports List')
     print('0 - Exit program')
     print()
 
 
 def display_course_menu():
     print('COMMAND MENU')
-    print('1 - List Courses')
+    print('1 - List Student Courses')
     print('2 - Add Course')
     print('3 - Delete Course')
     print('0 - Back')
@@ -41,7 +41,7 @@ def display_course_menu():
 
 def display_sports_menu():
     print('COMMAND MENU')
-    print('1 - List Sports')
+    print('1 - List Student Sports')
     print('2 - Add Sport')
     print('3 - Delete Sports')
     print('0 - Back')
