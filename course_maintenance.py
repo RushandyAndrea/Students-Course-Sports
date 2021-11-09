@@ -28,8 +28,8 @@ def list_student_course(students):
         print("There are no student in the database system.\n")
         return
 
-    print(f"{'ID':4s} {'First Name':20s} {'Last Name':20s}")
-    print('-' * 4, '-' * 20, '-' * 20)
+    print(f"{'ID':4s} {'First Name':20s} {'Last Name':20s} {'Courses':50s}")
+    print('-' * 4, '-' * 20, '-' * 20, '-' * 50)
 
     for student in students:
         student_id, first_name, last_name, courses, sports = student
