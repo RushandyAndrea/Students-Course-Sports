@@ -20,7 +20,7 @@ def get_list(students):
     Display the all student information stored in a 2nd list, it will notify the user if there is no
     data found.
     :param students: student data (id, first_name, last_name)
-    :return:
+    :return: no value
     """
     if len(students) == 0:
         print("There are no student in the database system.\n")
@@ -30,7 +30,22 @@ def get_list(students):
     print('-' * 4, '-' * 20, '-' * 20)
 
     for student in students:
-        print(f'{student[0]:<4d} {student[1]:20s} {student[2]:20s}')
+        student_id, first_name, last_name, courses, sports = student
+        print(f'{student_id:<4d} {first_name:20s} {last_name:20s}', end='')
+    print()
+
+
+def list_student_courses(student):
+    """
+    Display the selected student course information stored in a 2d list.
+    :param student: 2d list of student data [id, first_name, last_name, [courses], [sports]].
+    :return: no value
+    """
+    print(f'Student ID # {student[0]} {student[1]} {student[2]} is in: ', end='')
+
+    for course in student[3]:
+        print(f'{course}', end=', ')
+
     print()
 
 
@@ -113,10 +128,7 @@ def update_student(students):
         print('There are no students in the database. \n')
         return
 
-    student_id = val.get_poss_num('Please enter the Student ID you would like to updated: ')
-
-    first_name = students[student_id][1]
-    last_name = students[student_id][2]
+    student_id = val.get_poss_num('Please enter the Student ID you would like to be updated: ')
 
     if student_id == -1:
         print(f'Student ID number{student_id} not found.')
