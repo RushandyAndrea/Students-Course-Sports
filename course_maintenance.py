@@ -44,7 +44,7 @@ def list_student_course(students):
 
 def add_course(students, valid_courses):
     """
-
+    Promt user for student's course
     :param students:
     :param valid_courses:
     :return:
@@ -78,7 +78,7 @@ def add_course(students, valid_courses):
 
 def delete_course(students):
     """
-
+    Promt user for choosing which course to delete
     :param students:
     :return:
     """
