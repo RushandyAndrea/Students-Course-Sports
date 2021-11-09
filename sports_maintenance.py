@@ -59,14 +59,14 @@ def add_student_sport(students, valid_sport):
     print('Add Sport')
     print('-----------------')
 
-    student_id = val.get_poss_num('Please enter the Student ID you would like to add courses to', 'int')
+    student_id = val.get_poss_num('Please enter the Student ID you would like to add sports to', 'int')
     student_index = sm.find_student_index(students, student_id)
     if student_index == -1:
         print('Student not found')
         return
     else:
         student = students[student_index]
-        print('add course')
+        print('add sports')
         print('=' * 50)
         while True:
             i = 0
@@ -100,14 +100,14 @@ def delete_student_sport(students):
         print('There are no students in the database. \n')
         return
 
-    student_id = val.get_poss_num('Please enter the Student ID you would like to add courses to', 'int')
+    student_id = val.get_poss_num('Please enter the Student ID you would like to add sport to', 'int')
     student_index = sm.find_student_index(students, student_id)
     if student_index == -1:
         print('Student not found')
         return
     else:
         student = students[student_index]
-        print('Delete Course')
+        print('Delete sport')
         print('=' * 50)
         while True:
             i = 0
