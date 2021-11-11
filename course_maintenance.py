@@ -44,10 +44,17 @@ def list_student_course(students):
 
 def add_course(students, valid_courses):
     """
-    Promt user for student's course
-    :param students:
-    :param valid_courses:
-    :return:
+    Prompt the user to enter a student id, and if not valid return
+    Display a list of the courses a student is currently enrolled
+    Display a list of valid courses
+    Prompt the user to enter a valid course id or 0 to return to the course maintenance menu
+    If the student is already in the course, then display error message
+    otherwise add the course to the student's course list
+    When done, display an update list of all the courses the student is enrolled in
+
+    :param students: multi-dimensional list of student data [[id, first_name, last_name, [courses], [sports]]]
+    :param valid_courses: tuple of all valid courses to select from
+    :return no value
     """
     print('Add Courses')
     print('=' * 50)
@@ -78,9 +85,15 @@ def add_course(students, valid_courses):
 
 def delete_course(students):
     """
-    Promt user for choosing which course to delete
-    :param students:
-    :return:
+    Prompt the user to enter a student id, and if not valid return
+    Prompt the user to enter a student id, and if not valid return
+    Display a list of valid course
+    Prompt the user to enter a valid course id or 0 to return to the course maintenance menu
+    If the student is not in the select course, then display error message
+    otherwise remove the course to the student's course list.
+    When done, display an update list of all the course the student enrolled in
+    :param students: multi-dimensional list of student data [[id, first_name, last_name, [courses], [sports]]]
+    :return: no value
     """
     print('Delete Courses')
     print('=' * 50)
