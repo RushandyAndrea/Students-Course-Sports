@@ -76,7 +76,8 @@ def add_student(students, next_student_id):
 
 def delete(students):
     """
-
+    Prompt the user to enter a student id, and if not valid return.
+    If the student is not in the select course, then display error message
     :param students:
     :return:
     """
