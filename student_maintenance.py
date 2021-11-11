@@ -143,7 +143,7 @@ def update_student(students):
     if confirm:
         updated_first_name = input(f'Please enter the students First Name or press ENTER to keep '
                                    f'{student[1]}: ')
-        updated_last_name = input(f'Please enter the students Last Name or press ENTER to keep'
+        updated_last_name = input(f'Please enter the students Last Name or press ENTER to keep '
                                   f'{student[2]}: ')
 
         student[student_id][1] = updated_first_name
