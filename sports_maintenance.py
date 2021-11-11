@@ -28,8 +28,8 @@ def list_student_sport(students):
         print("There are no student in the database system.\n")
         return
 
-    print(f"{'ID':4s} {'First Name':20s} {'Last Name':20s}")
-    print('-' * 4, '-' * 20, '-' * 20)
+    print(f"{'ID':4s} {'First Name':20s} {'Last Name':20s} {'Sports':50s}")
+    print('-' * 4, '-' * 20, '-' * 20, '-' * 50)
 
     for student in students:
         student_id, first_name, last_name, courses, sports = student
@@ -45,14 +45,14 @@ def list_student_sport(students):
 def add_student_sport(students, valid_sport):
     """
     Prompt the user to enter a student id, and if not valid return
-    Display a list of the courses a student is currently enrolled
-    Display a list of valid courses
-    Prompt the user to enter a valid course id or 0 to return to the course maintenance menu
-    If the student is already in the course, then display error message
-    otherwise add the course to the student's course list
-    When done, display an update list of all the courses the student is enrolled in
+    Display a list of the sports a student is currently enrolled
+    Display a list of valid sport
+    Prompt the user to enter a valid sport id or 0 to return to the sports maintenance menu
+    If the student is already in the sport, then display error message
+    otherwise add the sport to the student's sport list
+    When done, display an update list of all the sports the student is enrolled in
     :param students: multi-dimensional list of student data [[id, first_name, last_name, [courses], [sports]]]
-    :param valid_sport: tuple of all valid courses to select from
+    :param valid_sport: tuple of all valid sports to select from
     :return: no value
     """
 
@@ -66,7 +66,7 @@ def add_student_sport(students, valid_sport):
         return
     else:
         student = students[student_index]
-        print('add sports')
+        print('Add sport')
         print('=' * 50)
         while True:
             i = 0
@@ -80,7 +80,7 @@ def add_student_sport(students, valid_sport):
             if valid_sport[command - 1] in student[3]:
                 print(f'{student[1]} is already in {valid_sport[command - 1]}')
             else:
-                student[3].append(valid_sport[command - 1])
+                student[4].append(valid_sport[command - 1])
                 print(f'{student[1]} has been added to {valid_sport[command - 1]}')
 
 
@@ -88,11 +88,11 @@ def delete_student_sport(students):
     """
     Prompt the user to enter a student id, and if not valid return
     Prompt the user to enter a student id, and if not valid return
-    Display a list of valid courses
-    Prompt the user to enter a valid course id or 0 to return to the course maintenance menu
-    If the student is not the select course, then display error message
-    otherwise remove the course to the student's course list
-    When done, display an update list of all the courses the student is enrolled in
+    Display a list of valid sport
+    Prompt the user to enter a valid sport id or 0 to return to the sports maintenance menu
+    If the student is not in the select sport, then display error message
+    otherwise remove the sport to the student's sport list.
+    When done, display an update list of all the sports the student is enrolled in
     :param students: multi-dimensional list of student data [[id, first_name, last_name, [courses], [sports]]]
     :return: no value
     """
@@ -100,7 +100,7 @@ def delete_student_sport(students):
         print('There are no students in the database. \n')
         return
 
-    student_id = val.get_poss_num('Please enter the Student ID you would like to add sport to', 'int')
+    student_id = val.get_poss_num('Please enter the Student ID you would like to add sports to', 'int')
     student_index = sm.find_student_index(students, student_id)
     if student_index == -1:
         print('Student not found')
@@ -111,7 +111,7 @@ def delete_student_sport(students):
         print('=' * 50)
         while True:
             i = 0
-            for x in student[3]:
+            for x in student[4]:
                 i += 1
                 print(f'{i} = {x}')
             print('0 = Exit')
@@ -119,4 +119,4 @@ def delete_student_sport(students):
             if command == 0:
                 break
             else:
-                print(f'{student[1]} has been removed from {student[3].pop(command - 1)}')
+                print(f'{student[1]} has been removed from {student[4].pop(command - 1)}')

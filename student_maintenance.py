@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 
 """
-# Programmer: Rushandy Andrea
-# Date: October 31, 2021
-# Description: This module contains the functions for adding, updating, and deleting student data.
+# Programmer: Rushandy Andrea, Kasey Drevecky
+# Date: November 7th, 2021
+# Description: For this assignment, we had to work as a team to make a Students course and sports
+program that stores list etc.
 """
 
 # Authorship
-__author__ = 'Rushandy Andrea'
+__author__ = 'Rushandy Andrea, Kasey Drevecky'
 __version__ = '1.0'
-__date__ = 'Oct 31, 2021'
+__date__ = 'November 7th, 2021'
 __status__ = 'Development'
 
 import data_validation as val
@@ -76,7 +77,8 @@ def add_student(students, next_student_id):
 
 def delete(students):
     """
-
+    Prompt the user to enter a student id, and if not valid return.
+    If the student is not in the select course, then display error message
     :param students:
     :return:
     """
@@ -129,12 +131,13 @@ def update_student(students):
         return
 
     student_id = val.get_poss_num('Please enter the Student ID you would like to be updated: ')
+    student_index = find_student_index(students, student_id)
 
-    if student_id == -1:
+    if student_index == -1:
         print(f'Student ID number {student_id} not found.')
         return
 
-    student = students[student_id - 1]
+    student = students[student_index]
 
     confirm = val.get_yes_no(f'Please confirm that you want to update Student ID number '
                              f'{student_id} {student[1]} {student[2]}')
@@ -142,11 +145,11 @@ def update_student(students):
     if confirm:
         updated_first_name = input(f'Please enter the students First Name or press ENTER to keep '
                                    f'{student[1]}: ')
-        updated_last_name = input(f'Please enter the students Last Name or press ENTER to keep'
+        updated_last_name = input(f'Please enter the students Last Name or press ENTER to keep '
                                   f'{student[2]}: ')
 
-        student[student_id][1] = updated_first_name
-        student[student_id][2] = updated_last_name
+        student[1] = updated_first_name
+        student[2] = updated_last_name
 
     else:
         print(f'Update has been cancelled!')
