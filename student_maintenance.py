@@ -130,12 +130,13 @@ def update_student(students):
         return
 
     student_id = val.get_poss_num('Please enter the Student ID you would like to be updated: ')
+    student_index = find_student_index(students, student_id)
 
-    if student_id == -1:
+    if student_index == -1:
         print(f'Student ID number {student_id} not found.')
         return
 
-    student = students[student_id - 1]
+    student = students[student_index]
 
     confirm = val.get_yes_no(f'Please confirm that you want to update Student ID number '
                              f'{student_id} {student[1]} {student[2]}')
@@ -146,8 +147,8 @@ def update_student(students):
         updated_last_name = input(f'Please enter the students Last Name or press ENTER to keep '
                                   f'{student[2]}: ')
 
-        student[student_id][1] = updated_first_name
-        student[student_id][2] = updated_last_name
+        student[1] = updated_first_name
+        student[2] = updated_last_name
 
     else:
         print(f'Update has been cancelled!')
