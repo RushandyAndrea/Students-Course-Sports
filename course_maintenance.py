@@ -86,7 +86,6 @@ def add_course(students, valid_courses):
 def delete_course(students):
     """
     Prompt the user to enter a student id, and if not valid return
-    Prompt the user to enter a student id, and if not valid return
     Display a list of valid course
     Prompt the user to enter a valid course id or 0 to return to the course maintenance menu
     If the student is not in the select course, then display error message
