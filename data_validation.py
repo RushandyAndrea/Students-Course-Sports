@@ -5,7 +5,6 @@
 # Date: November 7th, 2021
 # Description: For this assignment, we had to work as a team to make a Students course and sports
 program that stores list etc.
-Testing
 """
 
 # Authorship
