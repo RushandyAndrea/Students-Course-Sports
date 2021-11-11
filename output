@@ -1,0 +1,317 @@
+OUTPUT
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 2
+
+Add Student
+-----------------
+First name of student: : Kase
+Last name of student: : Drev
+Student ID number 1 Kase Drev was added.
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 6
+
+COMMAND MENU
+1 - List Student Sports
+2 - Add Sport
+3 - Delete Sports
+0 - Back
+Please enter a command number (Valid 0-3): 2
+
+Add Sport
+-----------------
+Please enter the Student ID you would like to add courses to Insert a number greater than 0: 1
+add course
+==================================================
+
+1 = Football
+2 = Baseball
+3 = Basketball
+4 = Track
+5 = Soccer
+6 = Swimming
+0 = Exit
+Please enter a command number (Valid 0-6): 1
+Kase has been added to Football
+
+1 = Football
+2 = Baseball
+3 = Basketball
+4 = Track
+5 = Soccer
+6 = Swimming
+0 = Exit
+Please enter a command number (Valid 0-6): 2
+Kase has been added to Baseball
+
+1 = Football
+2 = Baseball
+3 = Basketball
+4 = Track
+5 = Soccer
+6 = Swimming
+0 = Exit
+Please enter a command number (Valid 0-6): 0
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 6
+
+COMMAND MENU
+1 - List Student Sports
+2 - Add Sport
+3 - Delete Sports
+0 - Back
+Please enter a command number (Valid 0-3): 1
+
+ID   First Name           Last Name            Sports                                            
+---- -------------------- -------------------- --------------------------------------------------
+1    Kase                 Drev                Football, Baseball, 
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 5
+
+COMMAND MENU
+1 - List Student Courses
+2 - Add Course
+3 - Delete Course
+0 - Back
+Please enter a command number (Valid 0-3): 2
+
+Add Courses
+==================================================
+Please enter the Student ID you would like to add courses to Insert a number greater than 0: 1
+Add Course
+==================================================
+
+1 = History
+2 = Math
+3 = English
+4 = Spanish
+5 = Programming
+6 = Psychology
+0 = Exit
+Please enter a command number (Valid 0-6): 1
+Kase has been enrolled in History
+
+1 = History
+2 = Math
+3 = English
+4 = Spanish
+5 = Programming
+6 = Psychology
+0 = Exit
+Please enter a command number (Valid 0-6): 2
+Kase has been enrolled in Math
+
+1 = History
+2 = Math
+3 = English
+4 = Spanish
+5 = Programming
+6 = Psychology
+0 = Exit
+Please enter a command number (Valid 0-6): 0
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 5
+
+COMMAND MENU
+1 - List Student Courses
+2 - Add Course
+3 - Delete Course
+0 - Back
+Please enter a command number (Valid 0-3): 1
+ID   First Name           Last Name            Courses                                           
+---- -------------------- -------------------- --------------------------------------------------
+1    Kase                 Drev                History, Math, 
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 6
+
+COMMAND MENU
+1 - List Student Sports
+2 - Add Sport
+3 - Delete Sports
+0 - Back
+Please enter a command number (Valid 0-3): 3
+Please enter the Student ID you would like to add courses to Insert a number greater than 0: 1
+
+Delete Course
+==================================================
+1 = History
+2 = Math
+0 = Exit
+Please enter a command number (Valid 0-2): 2
+Kase has been removed from Math
+
+1 = History
+0 = Exit
+Please enter a command number (Valid 0-1): 0
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 5
+
+COMMAND MENU
+1 - List Student Courses
+2 - Add Course
+3 - Delete Course
+0 - Back
+Please enter a command number (Valid 0-3): 1
+
+ID   First Name           Last Name            Courses                                           
+---- -------------------- -------------------- --------------------------------------------------
+1    Kase                 Drev                History, 
+
+Press the enter key to continue…
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 3
+
+Please enter the Student ID you would like to be updated:  Insert a number greater than 0: 1
+Please confirm that you want to update Student ID number 1 Kase Drev (y=yes or n=no): y
+Please enter the students First Name or press ENTER to keep Kase: Kasey
+Please enter the students Last Name or press ENTER to keep Drev: Drevecky
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 2
+
+Add Student
+-----------------
+First name of student: : Rushandy
+Last name of student: : Andrea
+Student ID number 2 Rushandy Andrea was added.
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 4
+
+Please enter the Student ID you would like to delete Insert a number greater than 0: 2
+Please confirm that you want to delete Student ID number2 Rushandy Andrea (y=yes or n=no): y
+Student ID number2 Rushandy Andrea was deleted
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 1
+
+ID   First Name           Last Name           
+---- -------------------- --------------------
+1    Kasey                Drevecky            
+
+Press the enter key to continue...
+
+COMMAND MENU
+1 - List all students
+2 - Add a student
+3 - Update a student
+4 - Delete a student
+5 - Update Student Course List
+6 - Update Student Sports List
+0 - Exit program
+
+Please enter a command number (Valid 0-6): 0
+
+Bye!
