@@ -27,6 +27,7 @@ def display_menu():
     print('4 - Delete a student')
     print('5 - Update Student Course List')
     print('6 - Update Student Sports List')
+    print('7 - Student Records Report')
     print('0 - Exit program')
     print()
 
@@ -55,7 +56,7 @@ def main():
 
     while True:
         display_menu()
-        command = val.get_range('Please enter a command number', 0, 6)
+        command = val.get_range('Please enter a command number', 0, 7)
         print()
         if command == 1:
             sm.get_list(students)
@@ -88,6 +89,8 @@ def main():
                 spm.delete_student_sport(students)
             elif command == 0:
                 break
+        elif command == 7:
+            sm.get_student_report(students)
         elif command == 0:
             break
         else:
