@@ -153,3 +153,28 @@ def update_student(students):
 
     else:
         print(f'Update has been cancelled!')
+
+
+def get_student_report(students):
+    """
+    Displays everything that the student is enrolled into.
+    :param students:
+    :return:
+    """
+    if len(students) == 0:
+        print("There are no student in the database system.\n")
+        return
+
+    print(f"{'ID':4s} {'First Name':20s} {'Last Name':20s} {'Sports':25s} {'Courses':25s}")
+    print('-' * 4, '-' * 20, '-' * 20, '-' * 25, '-' * 25)
+
+    for student in students:
+        student_id, first_name, last_name, courses, sports = student
+        print(f'{student_id:<4d} {first_name:20s} {last_name:20s}', end='')
+
+        for sport in sports:
+            print(f' {sport}', end=', ')
+            for course in courses:
+                print(f'                {course}', end=', ')
+
+    return
